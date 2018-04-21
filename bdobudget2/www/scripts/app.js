@@ -269,65 +269,65 @@ $.ajax({
 
 
 
-document.getElementById('create-button').addEventListener('click', () => {
+//document.getElementById('create-button').addEventListener('click', () => {
 
-    blobService.createContainerIfNotExists('testcontainer', (error, container) => {
-        if (error) {
-            // Handle create container error
-        } else {
-            console.log(container.name);
-        }
-    });
+//    blobService.createContainerIfNotExists('testcontainer', (error, container) => {
+//        if (error) {
+//            // Handle create container error
+//        } else {
+//            console.log(container.name);
+//        }
+//    });
 
-});
-
-
-document.getElementById('upload-button').addEventListener('click', () => {
-
-    const file = document.getElementById('fileinput').files[0];
-    console.log(file);
-    blobService.createBlockBlobFromBrowserFile('testcontainer',
-        file.name,
-        file,
-        (error, result) => {
-            if (error) {
-                // Handle blob error
-            } else {
-                console.log('Upload is successful');
-            }
-        });
-
-});
+//});
 
 
+//document.getElementById('upload-button').addEventListener('click', () => {
 
-document.getElementById('list-button').addEventListener('click', () => {
+//    const file = document.getElementById('fileinput').files[0];
+//    console.log(file);
+//    blobService.createBlockBlobFromBrowserFile('testcontainer',
+//        file.name,
+//        file,
+//        (error, result) => {
+//            if (error) {
+//                // Handle blob error
+//            } else {
+//                console.log('Upload is successful');
+//            }
+//        });
 
-    blobService.listBlobsSegmented('testcontainer', null, (error, results) => {
-        if (error) {
-            // Handle list blobs error
-        } else {
-            results.entries.forEach(blob => {
-                console.log(blob);
-            });
-        }
-    });
-
-});
+//});
 
 
-document.getElementById('delete-button').addEventListener('click', () => {
 
-    var blobName = "bumblebee.jpg";
-    blobService.deleteBlobIfExists('testcontainer', blobName, (error, result) => {
-        if (error) {
-            // Handle delete blob error
-        } else {
-            console.log('Blob deleted successfully');
-        }
-    });
+//document.getElementById('list-button').addEventListener('click', () => {
 
-});
+//    blobService.listBlobsSegmented('testcontainer', null, (error, results) => {
+//        if (error) {
+//            // Handle list blobs error
+//        } else {
+//            results.entries.forEach(blob => {
+//                console.log(blob);
+//            });
+//        }
+//    });
+
+//});
+
+
+//document.getElementById('delete-button').addEventListener('click', () => {
+
+//    var blobName = "bumblebee.jpg";
+//    blobService.deleteBlobIfExists('testcontainer', blobName, (error, result) => {
+//        if (error) {
+//            // Handle delete blob error
+//        } else {
+//            console.log('Blob deleted successfully');
+//        }
+//    });
+
+//});
 
 function getTblDataSource(tbl, authToken) {
     console.log("get ds");

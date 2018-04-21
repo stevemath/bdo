@@ -1,7 +1,22 @@
 {
-    "name": "bdobudget2",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
+  "name": "bdobudget2",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/cordova": "^0.3.0",
+    "auth0-js": "^9.4.2",
+    "cordova-plugin-customurlscheme": "^4.3.0",
+    "cordova-plugin-safariviewcontroller": "^1.5.3"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-safariviewcontroller": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "{io.cordova.myapp929f66}",
+        "ANDROID_SCHEME": "{io.cordova.myapp929f66}",
+        "ANDROID_HOST": "incognitoauth.auth0.com",
+        "ANDROID_PATHPREFIX": "/cordova/{io.cordova.myapp929f66}/callback"
+      }
     }
+  }
 }
