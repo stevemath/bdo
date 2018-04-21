@@ -12,6 +12,7 @@
     <access origin="*" />
     <preference name="SplashScreen" value="screen" />
     <preference name="windows-target-version" value="10.0" />
+  <preference name="android-minSdkVersion" value="14" />
   <preference name="AndroidLaunchMode" value="singleTask" />
   <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
     <allow-intent href="http://*/*" />
