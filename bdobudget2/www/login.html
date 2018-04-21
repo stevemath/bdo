@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Embedded Login</title>
+	<base href="/">
+	<meta http-equiv="Content-Security-Policy" content="frame-src; img-src blob:  'self' 'unsafe-inline' http://cdn.auth0.com https://zumo.blob.core.windows.net   data: gap: https://login.microsoftonline.com https://bdobudget.azurewebsites.net incognitoauth.auth0.com https://kendo.cdn.telerik.com; style-src 'self' 'unsafe-inline' https://kendo.cdn.telerik.com">
+	<script src="js/azure-storage.blob.min.js"></script>
+	<script src="https://zumo.blob.core.windows.net/sdk/azure-mobile-apps-client.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.common.min.css" />
+	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.fiori.min.css" />
+	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.fiori.mobile.min.css" />
+
+	<script src="http://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="loading">
+		<img src="assets/loading.svg" alt="Loading spinner">
+	</div>
+	<div class="content">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Auth0 - jQuery</a>
+					<button class="btn btn-primary btn-margin">
+						Home
+					</button>
+					<button id="btn-login" class="btn btn-primary btn-margin">
+						Log In
+					</button>
+					<button id="btn-logout" class="btn btn-primary btn-margin">
+						Log Out
+					</button>
+				</div>
+			</div>
+		</nav>
+		<main class="container">
+			<!-- main container -->
+			<h4></h4>
+
+			<div id="cmsTabs">
+				<ul>
+					<li>Users</li>
+					<li>Categories</li>
+					<li>Envelopes</li>
+					<li>Transactions</li>
+					<li>Disbursements</li>
+					<li>Accts</li>
+
+					<li>Text Strings</li>
+					<li>Locations</li>
+					<li>Settings</li>
+				</ul>
+
+
+				<div>
+
+					<div id="usersGrid"></div>
+				</div>
+				<div>
+					<div id="catGrid"></div>
+				</div>
+				<div>
+					<div id="envGrid"></div>
+				</div>
+
+				<div>
+					<div id="transGrid"></div>
+
+					<div id="disEnvGrid"></div>
+				</div>
+
+				<div>
+					<div>Disbursements</div>
+					<div id="disGrid"></div>
+				</div>
+			</div>
+
+		</main>
+	</div>
+
+
+	
+		<button id="create-button">Create Container</button>
+
+		<input type="file" id="fileinput" />
+		<button id="upload-button">Upload</button>
+
+		<button id="list-button">List</button>
+
+		<button id="delete-button">Delete</button>
+	
+	<script>
+	
+
+	</script>
+
+
+
+
+<script src="http://cdn.auth0.com/js/lock/11.0.0/lock.min.js"></script>
+<script src="https://cdn.auth0.com/js/auth0/9.3.1/auth0.min.js"></script>
+<script src="auth0-variables.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
