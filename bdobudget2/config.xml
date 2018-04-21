@@ -105,6 +105,5 @@
   </platform>
   <preference name="Orientation" value="portrait" />
   <preference name="Fullscreen" value="True" />
-  <plugin name="cordova-plugin-camera" spec="~2.4.1" />
   <preference name="deployment-target" value="8" />
 </widget>
