@@ -97,11 +97,11 @@
   <preference name="Fullscreen" value="True" />
   <preference name="deployment-target" value="9" />
   <plugin name="cordova-plugin-camera" spec="~2.4.1" />
-  <plugin name="cordova-plugin-safariviewcontroller" spec="^1.5.3" />
   <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
     <variable name="URL_SCHEME" value="io.cordova.myapp929f66" />
     <variable name="ANDROID_SCHEME" value="io.cordova.myapp929f66" />
     <variable name="ANDROID_HOST" value="incognitoauth.auth0.com" />
     <variable name="ANDROID_PATHPREFIX" value="/cordova/io.cordova.myapp929f66/callback" />
   </plugin>
+  <plugin name="cordova-plugin-inappbrowser" spec="~3.0.0" />
 </widget>
