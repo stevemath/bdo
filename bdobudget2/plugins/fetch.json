@@ -43,13 +43,5 @@
             "ANDROID_HOST": "incognitoauth.auth0.com",
             "ANDROID_PATHPREFIX": "/cordova/{io.cordova.myapp929f66}/callback"
         }
-    },
-    "cordova-plugin-inappbrowser": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-inappbrowser@3.0.0"
-        },
-        "is_top_level": true,
-        "variables": {}
     }
 }
