@@ -104,4 +104,5 @@
     <variable name="ANDROID_HOST" value="incognitoauth.auth0.com" />
     <variable name="ANDROID_PATHPREFIX" value="/cordova/io.cordova.myapp929f66/callback" />
   </plugin>
+  <plugin name="cordova-plugin-inappbrowser" spec="~3.0.0" />
 </widget>

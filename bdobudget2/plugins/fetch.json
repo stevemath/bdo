@@ -1,47 +1,55 @@
 {
-  "cordova-plugin-whitelist": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-whitelist@1.2.2"
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
     },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-compat": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-compat"
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
     },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "cordova-plugin-camera": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-camera@2.4.1"
+    "cordova-plugin-camera": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-camera@2.4.1"
+        },
+        "is_top_level": true,
+        "variables": {}
     },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-safariviewcontroller": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-safariviewcontroller"
+    "cordova-plugin-safariviewcontroller": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-safariviewcontroller"
+        },
+        "is_top_level": true,
+        "variables": {}
     },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-customurlscheme": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-customurlscheme"
+    "cordova-plugin-customurlscheme": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-customurlscheme"
+        },
+        "is_top_level": true,
+        "variables": {
+            "URL_SCHEME": "{io.cordova.myapp929f66}",
+            "ANDROID_SCHEME": "{io.cordova.myapp929f66}",
+            "ANDROID_HOST": "incognitoauth.auth0.com",
+            "ANDROID_PATHPREFIX": "/cordova/{io.cordova.myapp929f66}/callback"
+        }
     },
-    "is_top_level": true,
-    "variables": {
-      "URL_SCHEME": "{io.cordova.myapp929f66}",
-      "ANDROID_SCHEME": "{io.cordova.myapp929f66}",
-      "ANDROID_HOST": "incognitoauth.auth0.com",
-      "ANDROID_PATHPREFIX": "/cordova/{io.cordova.myapp929f66}/callback"
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@3.0.0"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
-  }
 }

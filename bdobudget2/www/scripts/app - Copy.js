@@ -2,21 +2,54 @@
 var lock;
 var DSUsers;
 
-var client, // Connection to the Azure Mobile App backend
-    store,  // Sqlite store to use for offline data sync
-    syncContext, // Offline data sync context
-    // tableName = 'transactions',
-    tableName = 'transactions',
-    transTable; // Reference to a table endpoint on backend
-var bdobudgetClient;
-
 $('document').ready(function () {
   var content = $('.content');
+  var loadingSpinner = $('#loading');
   content.css('display', 'block');
- 
+  loadingSpinner.css('display', 'none');
+
 
     $("#cmsTabs").kendoTabStrip({});
 
+
+    var options = {
+        defaultEnterpriseConnection: 'stevetheincognitogroup-waad'
+    };
+   lock = new Auth0Lock(AUTH0_CLIENT_ID, AUTH0_DOMAIN, {
+      autoclose: true,
+     // defaultEnterpriseConnection: 'stevetheincognitogroup-waad',
+      socialButtonStyle: 'small',
+    auth: {
+      redirectUrl: AUTH0_CALLBACK_URL,
+      responseType: 'token id_token',
+        audience: 'https://' + AUTH0_DOMAIN + '/userinfo',
+      sso:false,
+      params: {
+        scope: 'openid profile'
+      }
+    }
+  });
+
+
+    lock.on('hash_parsed', function (result) {
+       
+        console.log(result);
+       
+    });
+    lock.on('authenticated', function (authResult) {
+      
+        console.log(authResult)
+    if (authResult && authResult.accessToken && authResult.idToken) {
+      setSession(authResult);
+    }
+    displayButtons();
+  });
+
+  lock.on('authorization_error', function(err) {
+    console.log(err);
+    alert('Error: ' + err.error + '. Check the console for further details.');
+    displayButtons();
+  });
 
   // buttons and event listeners
   var loginBtn = $('#btn-login');
@@ -26,31 +59,7 @@ $('document').ready(function () {
   logoutBtn.click(logout);
 
   function login() {
-      client = new WindowsAzure.MobileServiceClient('https://bdobudget.azurewebsites.net');
-
-      //client.login('aad')
-      client.login('google')
-          .then(function () {
-
-              var st = new Date().getTime();
-              console.log(st)
-              var transTbl = client.getTable(tableName);
-              console.log(transTbl)
-              transTbl
-                  // .where({ userId: 123 })
-                  .read()
-                  .then(function (data) {
-
-                      console.log(data);
-                      var ed = new Date().getTime();
-                      console.log(ed)
-                  }, function (err) { console.log(err) });
-
-              //.where({ userId: 123 })     // Set up the query
-              // Read the results
-              // 
-
-          });
+    lock.show();
   }
 
     function setSession(authResult) {
