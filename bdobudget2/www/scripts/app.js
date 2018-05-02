@@ -26,7 +26,7 @@ $('document').ready(function () {
   logoutBtn.click(logout);
 
   function login() {
-      client = new WindowsAzure.MobileServiceClient('https://bdobudget.azurewebsites.net');
+      client = new WindowsAzure.MobileServiceClient('https://bdo2.azurewebsites.net');
 
       //client.login('aad')
       client.login('google')
